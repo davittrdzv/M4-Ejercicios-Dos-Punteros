@@ -65,7 +65,8 @@ console.log(resultadoTwoSum); // [2, 4]
 
 // Cuadrados de un arreglo
 // Dado un arreglo de números enteros acomodados de menor a mayor, retorna un arreglo the los cuadrados de cada numero acomodados de menor a mayor.
-const numerosCuadrados = [-4, -1, 0, 3, 10];
+const numerosCuadrados1 = [-4, -1, 0, 3, 10];
+const numerosCuadrados2 = [-7,-3,2,3,11]
 
 const dosPunterosCuadradosTwoSum = (array) => {
     let inicio = 0;
@@ -89,8 +90,8 @@ const dosPunterosCuadradosTwoSum = (array) => {
     return resultado;
 }
 
-const resultadoCuadrados = dosPunterosCuadradosTwoSum(numerosCuadrados);
-console.log(resultadoCuadrados);
+console.log(dosPunterosCuadradosTwoSum(numerosCuadrados1));
+console.log(dosPunterosCuadradosTwoSum(numerosCuadrados2));
 
 // Palíndromo
 // A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
@@ -103,8 +104,8 @@ const esPalindromoTwoSum = (palabra) => {
     const arrayAct = palabra.toLowerCase().split('').filter((letra) => !/[\s,;.\-:?']+/.test(letra));
     let inicio = 0;
     let fin = arrayAct.length - 1;
-    console.log(arrayAct.join('')); // solo es para prueba visual
-    console.log([...arrayAct].reverse().join('')); // solo es para prueba visual
+    // console.log(arrayAct.join('')); // Esto solo es para prueba visual. No es parte de la solución.
+    // console.log([...arrayAct].reverse().join('')); // Esto solo es para prueba visual. No es parte de la solución.
 
     while (inicio < fin) {
         if (arrayAct[inicio] !== arrayAct[fin]) {
